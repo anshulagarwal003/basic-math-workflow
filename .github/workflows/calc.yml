@@ -1,0 +1,25 @@
+name: Simple Math Workflow
+
+on: [push]
+
+jobs:
+  math:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print inputs
+        run: |
+          echo "Number A: 5"
+          echo "Number B: 7"
+
+      - name: Add numbers
+        run: echo "5 + 7 = $((5 + 7))"
+
+      - name: Multiply numbers
+        run: echo "5 * 7 = $((5 * 7))"
+
+      - name: Subtract numbers
+        run: echo "7 - 5 = $((7 - 5))"
+
+      - name: Divide numbers
+        run: echo "7 / 5 = $((7 / 5))"
